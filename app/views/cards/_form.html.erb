@@ -22,6 +22,11 @@
   </div>
 
   <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.collection_select :status_id, Status.all, :id, :name %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

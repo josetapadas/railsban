@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @cards = Card.all
+    @statuses = Status.all
   end
 end

@@ -1,9 +1,16 @@
 <h1>Railsban</h1>
 <p>Welcome to our Kanban board on Rails!</p>
-<div>
-    <h2>Temporary cards list:</h2>
-    <ul>
-    <% @cards.each do |card| %>
-        <li><%= link_to(card) do %><%= card.name %><% end %>
+<p><%= link_to "Create a new Card", new_card_path %></p>
+
+<div class="boards-container">
+    <% @statuses.each do |status| %>
+        <div class="boards-container__board">
+            <h1><%= status.name %></h1>
+            <% status.cards.each do |card| %>
+                <div class="boards-container__board__card">
+                    <%= link_to card.name, card %>
+                </div>
+            <% end %>
+        </div>
     <% end %>
 </div>

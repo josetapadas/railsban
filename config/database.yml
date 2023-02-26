@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['POSTGRESQL_USERNAME'] %>
+  password: <%= ENV['POSTGRESQL_PASSWORD'] %>
+  database: <%= ENV['POSTGRESQL_DATABASE'] %>
+  host: <%= ENV['POSTGRESQL_ADDRESS'] %>  
+  pool: 5
+  port: 5432

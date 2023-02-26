@@ -1,2 +1,9 @@
 <h1>Railsban</h1>
 <p>Welcome to our Kanban board on Rails!</p>
+<div>
+    <h2>Temporary cards list:</h2>
+    <ul>
+    <% @cards.each do |card| %>
+        <li><%= link_to(card) do %><%= card.name %><% end %>
+    <% end %>
+</div>

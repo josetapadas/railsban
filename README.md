@@ -1,6 +1,6 @@
 # Railsban
 
-Welcome to the application repo, supporting the "From 0 to Live in 1h with RoR" presentation for SINFO'30.
+Welcome to the application repo, supporting the "From 0 to prod in 90mins with RoR" presentation for SINFO'30.
 
 ## Table of Contents
 
